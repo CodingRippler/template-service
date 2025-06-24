@@ -28,7 +28,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/commerce/**").permitAll() // Public endpoints
+                        .requestMatchers("/api/template/**").permitAll() // Public endpoints
                         .requestMatchers("/actuator/**").permitAll() // Public actuator endpoints
                         .anyRequest().authenticated() // Secure all other endpoints
                 )
